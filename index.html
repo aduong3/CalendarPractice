@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet"> <!--Inconsolata-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+<section>
+<div class="calendar-container">
+
+<div class="calendarHeader">
+<h2 class="title">Calendar</h2>
+<div class="controls">
+<i class="fa-solid fa-arrow-left prevMonth"></i>
+<h3 id="monthYearDisplay"></h3>
+<i class="fa-solid fa-arrow-right nextMonth"></i>
+</div>
+</div>
+
+<div class="main-body">
+<div class="displayDates">
+    <p>Su</p>
+    <p>Mon</p>
+    <p>Tue</p>
+    <p>Wed</p>
+    <p>Thu</p>
+    <p>Fri</p>
+    <p>Sat</p>
+</div>
+<div class="displayCalendar">
+
+</div>
+</div>
+<div class="addEventButton">
+    <h3 onclick="EventForm()">Add Event Here</h3>
+</div>
+</div>
+</section>
+
+<section class="eventLayout">
+<div class="displayEvents">
+    
+</div>
+
+<div class="addEvents">
+    <div class="preHeader">
+    <h2 class="DateTitle"></h2>
+    <i onclick="EventForm()" class="fa-solid fa-xmark exitEventPanel"></i>
+</div>
+    <form>
+        <div class="eventHeader">
+        <label for="eventTitle">Event Title: 
+            <input type="text" name="eventTitle" id="eventTitle" autocomplete="off" required>
+        </label>
+        
+        </div>
+        <div class="timeSelector">
+
+        <label for="startTime">Start:
+            <input type="time" name="startTime" id="startTime">
+        </label>
+
+        <label for="endTime"> End:
+            <input type="time" name="endTime" id="endTime" >
+        </label>
+
+        </div>
+
+        <button onclick="submitForm(event)" type="button">Add Event</button>
+    </form>
+    
+</div>
+</section>
+
+<script src="calendar.js"></script>
+
+</body>
+</html>
